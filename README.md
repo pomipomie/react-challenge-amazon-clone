@@ -1,3 +1,12 @@
+This is a modified version of the original project by [CleverProgrammers](https://github.com/CleverProgrammers/react-challenge-amazon-clone).
+
+Changes I made:
+1. Added Error 404/Page Not Found page (with [React Router](https://v5.reactrouter.com/))
+2. Added individual product pages (with [React Router](https://v5.reactrouter.com/)
+3. Some minor styling details
+
+-----------------
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
