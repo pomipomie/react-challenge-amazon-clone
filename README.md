@@ -4,6 +4,7 @@ Changes I made:
 1. Added Error 404/Page Not Found page (with [React Router](https://v5.reactrouter.com/))
 2. Added individual product pages (with [React Router](https://v5.reactrouter.com/)
 3. Some minor styling details
+4. Added Dark Mode and toggle button
 
 -----------------
 
