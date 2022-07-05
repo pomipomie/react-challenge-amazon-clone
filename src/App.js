@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import "./App.css";
 import Header from "./Header";
 import Home from "./Home";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route, useParams } from "react-router-dom";
 import Checkout from "./Checkout";
 import Login from "./Login";
 import Payment from "./Payment";
@@ -11,6 +11,8 @@ import { auth } from "./firebase";
 import { useStateValue } from "./StateProvider";
 import { loadStripe } from "@stripe/stripe-js";
 import { Elements } from "@stripe/react-stripe-js";
+import ProductView from "./ProductView";
+import Product from "./Product";
 
 const promise = loadStripe(
   "pk_test_51HPvU9DFg5koCdLGJJbNo60QAU99BejacsvnKvT8xnCu1wFLCuQP3WBArscK3RvSQmSIB3N0Pbsc7TtbQiJ1vaOi00X9sIbazL"
@@ -63,6 +65,9 @@ function App() {
               <Payment />
             </Elements>
           </Route>
+          <Route path="/product/:id" element={<Prods />}>
+            <Prods />
+          </Route>
           <Route path="/">
             <Header />
             <Home />
@@ -70,6 +75,17 @@ function App() {
         </Switch>
       </div>
     </Router>
+  );
+}
+
+export function Prods() {
+  let { id } = useParams();
+
+  return (
+    <div>
+      <Header />
+      <ProductView id={id}/>
+    </div>
   );
 }
 
