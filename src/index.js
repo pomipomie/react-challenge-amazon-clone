@@ -5,13 +5,16 @@ import App from "./App";
 import * as serviceWorker from "./serviceWorker";
 import reducer, { initialState } from "./reducer";
 import { StateProvider } from "./StateProvider";
+import ThemeWrapper from "./themeWrapper";
 
 ReactDOM.render(
-  <React.StrictMode>
-    <StateProvider initialState={initialState} reducer={reducer}>
-      <App />
-    </StateProvider>
-  </React.StrictMode>,
+  <ThemeWrapper>
+    <React.StrictMode>
+      <StateProvider initialState={initialState} reducer={reducer}>
+        <App />
+      </StateProvider>
+    </React.StrictMode>
+  </ThemeWrapper>,
   document.getElementById("root")
 );
 

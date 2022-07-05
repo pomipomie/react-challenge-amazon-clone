@@ -5,9 +5,13 @@ import ShoppingBasketIcon from "@material-ui/icons/ShoppingBasket";
 import { Link } from "react-router-dom";
 import { useStateValue } from "./StateProvider";
 import { auth } from "./firebase";
+import { ThemeContext, themes } from "./themeContext";
+import { Button } from "@material-ui/core";
+import { WbSunny, NightsStay } from '@material-ui/icons';
 
 function Header() {
   const [{ basket, user }, dispatch] = useStateValue();
+  const [darkMode, setDarkMode] = React.useState(true);
 
   const handleAuthenticaton = () => {
     if (user) {
@@ -21,6 +25,7 @@ function Header() {
         <img
           className="header__logo"
           src="http://pngimg.com/uploads/amazon/amazon_PNG11.png"
+          alt="Amazon"
         />
       </Link>
 
@@ -58,6 +63,24 @@ function Header() {
             </span>
           </div>
         </Link>
+
+        <div className="header__toggle">
+          <ThemeContext.Consumer>
+          {({ changeTheme }) => (
+              <Button
+              onClick={() => {
+                setDarkMode(!darkMode);
+                changeTheme(
+                  darkMode ? themes.dark : themes.light
+                  )
+                }}
+              >
+               <WbSunny className="toggleIcon" />
+              </Button>
+            )
+          }
+          </ThemeContext.Consumer>
+        </div>
       </div>
     </div>
   );

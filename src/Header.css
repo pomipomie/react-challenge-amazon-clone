@@ -1,8 +1,10 @@
+@import url('./App.css');
+
 .header {
   height: 60px;
   display: flex;
   align-items: center;
-  background-color: #131921;
+  background-color: var(--header__background);
   position: sticky;
   top: 0;
   z-index: 100;
@@ -27,16 +29,17 @@
   padding: 10px;
   border: none;
   width: 100%;
+  background-color: var(--header__color);
 }
 
 .header__searchIcon {
   padding: 5px;
   height: 22px !important;
-  background-color: #cd9042;
+  background-color: var(--header__accent);
 }
 
 .header__optionLineOne {
-  font-size: 10px;
+  font-size: 12px;
 }
 
 .header__optionLineTwo {
@@ -47,7 +50,7 @@
 .header__optionBasket {
   display: flex;
   align-items: center;
-  color: white;
+  color: var(--header__color);
 }
 
 .header__basketCount {
@@ -60,10 +63,15 @@
   justify-content: space-evenly;
 }
 
-.header__option {
+.header__option, .header__option:any-link {
   display: flex;
   flex-direction: column;
   margin-left: 10px;
   margin-right: 10px;
-  color: white;
+  color: var(--header__color);
+  text-decoration: none;
+}
+
+.toggleIcon {
+  color: var(--header__toggle);
 }

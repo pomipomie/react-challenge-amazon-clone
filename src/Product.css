@@ -4,12 +4,14 @@
   align-items: center;
   justify-content: flex-end;
   margin: 10px;
-  padding: 20px;
   width: 100%;
-  max-height: 400px;
+  max-width: 90vw;
+  max-height: 500px;
   min-width: 100px;
-  background-color: white;
+  background-color: var(--product__background);
   z-index: 1;
+  color: var(--product__title);
+  gap: 5px;
 }
 
 .product__rating {
@@ -26,9 +28,10 @@
 .product > button {
   background: #f0c14b;
   border: 1px solid;
-  margin-top: 10px;
+  margin: 10px 0;
   border-color: #a88734 #9c7e31 #846a29;
   color: #111;
+  cursor: pointer;
 }
 
 .product__price {
@@ -43,7 +46,7 @@
 .product__title {
   text-decoration: none;
   font-weight: bold;
-  color: #111;
+  color: var(--product__title);
 }
 
 .product__title:any-link {

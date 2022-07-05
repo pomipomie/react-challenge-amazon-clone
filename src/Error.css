@@ -1,18 +1,18 @@
 .error {
     margin: 3em;
     padding: 6em;
-    background-color: white;
+    background-color: var(--product__background);
     text-align: center;
 }
 
 .error>* {
     padding: 1em;
-    color: #131921;
+    color: var(--product__title);
 }
 
 .error__return, .error__return:any-link {
     text-decoration: none;
-    color: #111;
+    color: var(--product__title);
 }
 
 .error__return:hover {
