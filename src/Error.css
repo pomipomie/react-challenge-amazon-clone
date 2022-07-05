@@ -1,0 +1,20 @@
+.error {
+    margin: 3em;
+    padding: 6em;
+    background-color: white;
+    text-align: center;
+}
+
+.error>* {
+    padding: 1em;
+    color: #131921;
+}
+
+.error__return, .error__return:any-link {
+    text-decoration: none;
+    color: #111;
+}
+
+.error__return:hover {
+    color: #846a29;
+}

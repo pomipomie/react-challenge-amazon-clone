@@ -23,14 +23,14 @@ function Product({ id, title, image, price, rating }) {
   return (
     <div className="product">
       <div className="product__info">
-      <Link to={`/product/${id}`}>
-        <p>{title}</p>
+      <Link className="product__title" to={`/product/${id}`}>
+        <p className="product__title product__prop">{title}</p>
       </Link>
-        <p className="product__price">
+        <p className="product__price product__prop">
           <small>$</small>
           <strong>{price}</strong>
         </p>
-        <div className="product__rating">
+        <div className="product__rating product__prop">
           {Array(rating)
             .fill()
             .map((_, i) => (
@@ -39,9 +39,9 @@ function Product({ id, title, image, price, rating }) {
         </div>
       </div>
 
-      <img src={image} alt="" />
+      <img src={image} alt="" className="product__prop"/>
 
-      <button onClick={addToBasket}>Add to Basket</button>
+      <button onClick={addToBasket} className="product__prop">Add to Basket</button>
     </div>
   );
 }

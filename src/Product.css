@@ -39,3 +39,21 @@
   height: 100px;
   margin-bottom: 15px;
 }
+
+.product__title {
+  text-decoration: none;
+  font-weight: bold;
+  color: #111;
+}
+
+.product__title:any-link {
+  text-decoration: none;
+}
+
+.product__title:hover {
+  color: #846a29;
+}
+
+.product__prop {
+  padding: 0.5em;
+}
