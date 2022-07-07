@@ -5,6 +5,7 @@ Changes I made:
 2. Added individual product pages (with [React Router](https://v5.reactrouter.com/)
 3. Some minor styling details
 4. Added Dark Mode and toggle button
+5. Added Contact Form (sends inputs to alert window)
 
 -----------------
 

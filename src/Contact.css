@@ -1,0 +1,52 @@
+.formcontainer {
+    display: block;
+    margin: 2vw 30vw;
+    background-color: var(--contact__background);
+    padding: 2vw 3vw 2vw 5vw;
+    width: 30vw;
+    font-size: 1rem;
+    color: var(--product__title);
+}
+
+.formcontainer form>* {
+    display: block;
+    padding: .5em;
+}
+
+.formcontainer form h2 {
+    text-align: center;
+}
+
+.formcontainer input[type='text'], 
+.formcontainer input[type='email'],
+.formcontainer select,
+.formcontainer textarea {
+    display: block;
+    margin: .5em 0;
+    border: none;
+    padding: .3em;
+    width: 70%;
+    font-size: .9rem;
+    font-family: inherit;
+    background-color: var(--header__color);
+}
+
+.formcontainer input[type='submit'] {
+    margin: auto;
+    padding: .5em;
+    background: #f0c14b;
+    border: 1px solid;
+    border-color: #a88734 #9c7e31 #846a29;
+    color: #111;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.formcontainer .title, .listcontainer {
+    margin-bottom: .3em;
+}
+
+.formcontainer input[type='checkbox'] {
+    padding: .5em;
+    background-color: var(--header__color);
+}

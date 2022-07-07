@@ -10,16 +10,16 @@
   --body__background:  rgb(234, 237, 237);
   --product__background: #fff;
   --product__title: #111;
+  --contact__background: #cd9042;
 }
 
 :root .dark {
-  /* --header__background: #fff; */
-  /* --header__accent: #cd9042; */
   --header__color: #ece7e1e5; 
   --header__toggle: #ac9e8de5;
   --body__background: #1e2733e3;
   --product__background: #0a0a0a;
   --product__title: #fff;
+  --contact__background: #131921;
 }
 
 body {
